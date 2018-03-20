@@ -1,0 +1,17 @@
+{
+  "name": "pubg-api-wrapper",
+  "version": "0.0.1",
+  "description": "JS Wrapper for PUBGAPI",
+  "main": "index.js",
+  "author": "Sam <sam@sasbartlett.com>",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/relevantsam/PUBGAPI"
+  },
+  "dependencies": {
+    "kitsu": "^5.0.7",
+    "user": "0.0.0"
+  }
+}
