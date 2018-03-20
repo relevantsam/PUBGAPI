@@ -13,9 +13,9 @@ npm install pubg-api-wrapper --save
 Example:
 
 ```
-import { pubgApiWrapper } from 'pubg-api-wrapper';
+import { pubgApiWrapper as PUBG } from 'pubg-api-wrapper';
 
-const api = new pubgapi('my_super_secret_token');
+const api = new PUBG('my_super_secret_token');
 
 let matches;
 

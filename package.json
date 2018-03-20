@@ -1,8 +1,8 @@
 {
   "name": "pubg-api-wrapper",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "JS Wrapper for PUBGAPI",
-  "main": "index.js",
+  "main": "build/index.js",
   "author": "Sam <sam@sasbartlett.com>",
   "license": "MIT",
   "private": false,
@@ -12,5 +12,13 @@
   },
   "dependencies": {
     "kitsu": "^5.0.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel src -d build"
   }
 }
