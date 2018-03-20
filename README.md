@@ -52,7 +52,7 @@ Status data from the PUBG API in the following format if successful:
 
 If the API fails, you'll get the error from the API passed through to your app. Use `catch` to process it.
 
-## getMatches(shard, filters)
+## getMatches(shard, filters, offset, limit, sort)
 Fetch match objects from the API, applying filters as needed
 
 ### Params:
