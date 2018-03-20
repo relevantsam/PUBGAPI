@@ -2,12 +2,18 @@
 
 A simple wrapper for the PUBG API. Uses [kitsu](https://github.com/wopian/kitsu) to interact with the api.
 
+## Installation
+```
+yarn add pubg-api-wrapper --save
+npm install pubg-api-wrapper --save
+```
+
 ## Usage
 
 Example:
 
 ```
-const pubgapi = require('pubgapi');
+const pubgapi = require('pubgApiWrapper');
 
 const api = new pubgapi('my_super_secret_token');
 
