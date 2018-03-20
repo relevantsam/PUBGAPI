@@ -13,7 +13,7 @@ npm install pubg-api-wrapper --save
 Example:
 
 ```
-const pubgapi = require('pubgApiWrapper');
+import { pubgApiWrapper } from 'pubg-api-wrapper';
 
 const api = new pubgapi('my_super_secret_token');
 

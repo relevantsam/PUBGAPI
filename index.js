@@ -3,7 +3,7 @@
 const Kitsu = require('kitsu');
 const PUBG_API_URL = "https://api.playbattlegrounds.com";
 
-class pubgApiWrapper {
+export class pubgApiWrapper {
     constructor(token) {
         this.api = new Kitsu({
             baseURL: PUBG_API_URL,
@@ -28,6 +28,4 @@ class pubgApiWrapper {
             throw err;
         })
     }
-}
-
-export default pubgApiWrapper;
+};
