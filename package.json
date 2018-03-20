@@ -1,6 +1,6 @@
 {
   "name": "pubg-api-wrapper",
-  "version": "0.0.6",
+  "version": "0.0.75",
   "description": "JS Wrapper for PUBGAPI",
   "main": "build/index.js",
   "author": "Sam <sam@sasbartlett.com>",

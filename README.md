@@ -36,35 +36,32 @@ Check them out below:
 
 ## getStatus()
 
-    Fetch the status of the API
+Fetch the status of the API
 
 ### Params:
-    - none
+- none
 ### Returns:
-    Status data from the PUBG API in the following format if successful:
+Status data from the PUBG API in the following format if successful:
 
-    ```
     {
         id: string,
         releasedAt: datetime,
         type: string,
         version: string
     }
-    ```
-    
-    If the API fails, you'll get the error from the API passed through to your app. Use `catch` to process it.
+
+If the API fails, you'll get the error from the API passed through to your app. Use `catch` to process it.
 
 ## getMatches(shard, filters)
-    Fetch match objects from the API, applying filters as needed
+Fetch match objects from the API, applying filters as needed
 
 ### Params:
-    - **shard** - the shard you'd like matches from. [See the PUBG API for more details](https://documentation.playbattlegrounds.com/en/making-requests.html#regions)
-    - **filters** - an optional object containing key value pairs to filter the matches. You can use any of the filters from the [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
+- **shard** - the shard you'd like matches from. [See the PUBG API for more details](https://documentation.playbattlegrounds.com/en/making-requests.html#regions)
+- **filters** - an optional object containing key value pairs to filter the matches. You can use any of the filters from the [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
 
 ### Returns:
-    A pretty complex array of match objects. 
+A pretty complex array of match objects:
 
-    ```
     [
         {
             "type": string,
@@ -146,23 +143,20 @@ Check them out below:
             "titleId": string
         }
     ]
-    ```
+
 
 ## Examples
 
 Fetching all recent matches for pc-na:
 
-```
-import { pubgApiWrapper as PUBG } from 'pubg-api-wrapper';
+    import { pubgApiWrapper as PUBG } from 'pubg-api-wrapper';
 
-const api = new PUBG('my_super_secret_token');
+    const api = new PUBG('my_super_secret_token');
 
-let matches;
+    let matches;
 
-api.getMatches('pc-na').then((data) => {
-    matches = data;
-}).catch((err) => {
-    throw err;
-});
-
-```
+    api.getMatches('pc-na').then((data) => {
+        matches = data;
+    }).catch((err) => {
+        throw err;
+    });
