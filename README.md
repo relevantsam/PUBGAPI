@@ -58,6 +58,9 @@ Fetch match objects from the API, applying filters as needed
 ### Params:
 - **shard** - the shard you'd like matches from. [See the PUBG API for more details](https://documentation.playbattlegrounds.com/en/making-requests.html#regions)
 - **filters** - an optional object containing key value pairs to filter the matches. You can use any of the filters from the [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
+- **offset** - an optional int used in paging for offseting the results to return
+- **limit** - an optional int used to cap the number of results returned in the request
+- **sort** - an optional string used to determine the order of the returned results. Check the API documentation for options: [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
 
 ### Returns:
 A pretty complex array of match objects:

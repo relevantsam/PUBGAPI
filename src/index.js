@@ -21,10 +21,11 @@ export class pubgApiWrapper {
         })
     }
 
-    getMatches(shard, filters = {}) {
-        return this.api.get(`shards/${shard}/matches`, {
-            filter: filters
-        }).then(({data}) => data, (err) => {
+    getMatches(shard, filters = {}, offset=0, limit=5, sort="createdAt") {
+        let params = { filter: filters, sort: sort };
+        if(offset != 0 && limit != 0) params.page = {limit: limit, offset: offset};
+
+        return this.api.get(`shards/${shard}/matches`, params).then(({data}) => data, (err) => {
             throw err;
         })
     }
