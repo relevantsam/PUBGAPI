@@ -1,6 +1,6 @@
 {
   "name": "pubg-api-wrapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JS Wrapper for PUBGAPI",
   "main": "build/index.js",
   "author": "Sam <sam@sasbartlett.com>",
@@ -11,7 +11,8 @@
     "url": "https://github.com/relevantsam/PUBGAPI"
   },
   "dependencies": {
-    "kitsu": "^5.0.7"
+    "kitsu": "^5.0.7",
+    "npm": "^5.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -20,5 +21,18 @@
   },
   "scripts": {
     "build": "babel src -d build"
+  },
+  "keywords": [
+    "pubg",
+    "api wrapper",
+    "wrapper",
+    "player unknowns battlegrounds",
+    "pubg service",
+    "pubg api",
+    "player unknowns battlegrounds api"
+  ],
+  "bugs": {
+    "url": "https://github.com/relevantsam/PUBGAPI/issues",
+    "email": "sam@sasbartlett.com"
   }
 }
