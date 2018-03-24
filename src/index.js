@@ -25,7 +25,13 @@ export class pubgApiWrapper {
         let params = { filter: filters, sort: sort };
         if(offset != 0 && limit != 0) params.page = {limit: limit, offset: offset};
 
-        return this.api.get(`shards/${shard}/matches`, params).then(({data}) => data, (err) => {
+        return this.api.get(`shards/${shard}/matches`, params).then(({data}) => data, err => {
+            throw err;
+        })
+    }
+
+    getMatch(shard, id) {
+        return this.api.get(`shards/${shard}/matches/${id}`).then(({data}) => data, err => {
             throw err;
         })
     }

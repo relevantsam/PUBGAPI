@@ -57,7 +57,7 @@ Fetch match objects from the API, applying filters as needed
 
 ### Params:
 - **shard** - the shard you'd like matches from. [See the PUBG API for more details](https://documentation.playbattlegrounds.com/en/making-requests.html#regions)
-- **filters** - an optional object containing key value pairs to filter the matches. You can use any of the filters from the [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
+- **filters** - an optional object containing key value pairs to filter the matches. You can use any of the filters from the [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches). Ex: `[{"gameMode": "squad"}]`
 - **offset** - an optional int used in paging for offseting the results to return
 - **limit** - an optional int used to cap the number of results returned in the request
 - **sort** - an optional string used to determine the order of the returned results. Check the API documentation for options: [PUBG API documentation for matches](https://documentation.playbattlegrounds.com/en/matches.html#/Matches/get_matches) 
@@ -146,6 +146,96 @@ A pretty complex array of match objects:
             "titleId": string
         }
     ]
+
+## getMatch(shard, id)
+Fetch match object from the API by id
+
+### Params:
+- **shard** - the shard you'd like matches from. [See the PUBG API for more details](https://documentation.playbattlegrounds.com/en/making-requests.html#regions)
+- **id** - The id of the match you're interested in
+
+### Returns:
+A match object:
+
+    {
+        "type": string,
+        "id": string,
+        "links": {
+            "schema": string,
+            "self": string
+        },
+        "assets": [
+            {
+                "type": string,
+                "id": string,
+                "URL": string,
+                "createdAt": datetime,
+                "description": string,
+                "name": string
+            }
+        ],
+        "rosters": [
+            {
+                "type": string,
+                "id": string,
+                "participants": [
+                    {
+                        "type": string,
+                        "id": string,
+                        "actor": string,
+                        "shardId": string,
+                        "stats": {
+                            "DBNOs": int,
+                            "assists": int,
+                            "boosts": int,
+                            "damageDealt": int,
+                            "deathType": string,
+                            "headshotKills": int,
+                            "heals": int,
+                            "killPlace": int,
+                            "killPoints": int,
+                            "killPointsDelta": double,
+                            "killStreaks": int,
+                            "kills": int,
+                            "lastKillPoints": int,
+                            "lastWinPoints": int,
+                            "longestKill": int,
+                            "mostDamage": int,
+                            "name": string,
+                            "playerId": string,
+                            "revives": int,
+                            "rideDistance": int,
+                            "roadKills": int,
+                            "teamKills": int,
+                            "timeSurvived": int,
+                            "vehicleDestroys": int,
+                            "walkDistance": double,
+                            "weaponsAcquired": int,
+                            "winPlace": int,
+                            "winPoints": int,
+                            "winPointsDelta": double
+                        }
+                    }
+                ],
+                "shardId": string,
+                "stats": {
+                    "rank": int,
+                    "teamId": int
+                },
+                "won": string
+            }
+        ],
+        "rounds": [],
+        "spectators": [],
+        "createdAt": datetime,
+        "duration": int,
+        "gameMode": string,
+        "patchVersion": string,
+        "shardId": string,
+        "stats": null,
+        "tags": null,
+        "titleId": string
+    }
 
 
 ## Examples
