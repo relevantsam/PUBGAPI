@@ -1,6 +1,6 @@
 {
   "name": "pubg-api-wrapper",
-  "version": "0.2.15",
+  "version": "0.2.2",
   "description": "JS Wrapper for PUBGAPI",
   "main": "build/index.js",
   "author": "Sam <sam@sasbartlett.com>",
@@ -17,7 +17,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "npm": "^5.7.1"
+    "npm": "^5.8.0"
   },
   "scripts": {
     "build": "babel src -d build"
